@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>267F8B4D-AFD4-444A-A739-082AEA392FB3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>isbn</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>19497244-3151-4C81-B8A3-C77D7B60E515</key>
+		<string>file:///C:/SVN/Altium_Parts</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>isbn.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>19497244-3151-4C81-B8A3-C77D7B60E515</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>19497244-3151-4C81-B8A3-C77D7B60E515</key>
+		<string>file:///C:/SVN</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>file:///C:/SVN/Altium_Parts/isbn.xcworkspace</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>19497244-3151-4C81-B8A3-C77D7B60E515</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>19497244-3151-4C81-B8A3-C77D7B60E515</string>
+			<key>IDESourceControlWCCName</key>
+			<string>isbn</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:"
+      name = "isbn">
+      <FileRef
+         location = "group:index.html">
+      </FileRef>
+      <FileRef
+         location = "group:isbn.xcworkspace">
+      </FileRef>
+      <Group
+         location = "group:mysql"
+         name = "mysql">
+         <FileRef
+            location = "group:add.php">
+         </FileRef>
+         <Group
+            location = "group:images"
+            name = "images">
+            <FileRef
+               location = "group:bg.gif">
+            </FileRef>
+            <FileRef
+               location = "group:delete-icon.GIF">
+            </FileRef>
+            <FileRef
+               location = "group:edit-icon.gif">
+            </FileRef>
+            <FileRef
+               location = "group:filter.gif">
+            </FileRef>
+            <FileRef
+               location = "group:next.png">
+            </FileRef>
+            <FileRef
+               location = "group:previous.png">
+            </FileRef>
+            <FileRef
+               location = "group:sortable.gif">
+            </FileRef>
+            <FileRef
+               location = "group:sorted_down.gif">
+            </FileRef>
+            <FileRef
+               location = "group:sorted_up.gif">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:index.php">
+         </FileRef>
+         <FileRef
+            location = "group:isbn.php">
+         </FileRef>
+         <FileRef
+            location = "group:javascript.js">
+         </FileRef>
+         <FileRef
+            location = "group:query.php">
+         </FileRef>
+         <FileRef
+            location = "group:search_author.php">
+         </FileRef>
+         <FileRef
+            location = "group:spin.js">
+         </FileRef>
+         <FileRef
+            location = "group:table.css">
+         </FileRef>
+         <FileRef
+            location = "group:table.js">
+         </FileRef>
+         <FileRef
+            location = "group:update.php">
+         </FileRef>
+      </Group>
+   </Group>
+</Workspace>

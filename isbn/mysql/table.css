@@ -1,0 +1,88 @@
+body {
+	font:10px Verdana,Arial;
+	margin:25px;
+	background:#fff url(images/bg.gif) repeat-x;
+	color:#091f30
+}
+table.example {
+        border:1px solid black;
+	border-collapse:collapse;
+	white-space: nowrap;
+}
+table.example th, table.example td {
+	border:1px solid #aaaaaa;
+	padding: 2px 15px 2px 15px;
+}
+table.example th.nopadding, table.example td.nopadding {
+	padding: 0px 0px 0px 0px;
+}
+table.example thead th {
+	background-color:#ccccff;
+}
+table.example tfoot td {
+	background-color:#ccccff;
+}
+
+table.example tr.tbody_header {
+	font-weight:bold;
+	text-align:center;
+	background-color:#dddddd;
+}
+
+/* Mouseover */
+table.example tr:hover {
+	background-color:#acccff;
+}
+
+/* Striping */
+tr.alternate {
+	background-color:#ecf2f6;
+}
+
+/* Sorting */
+th.table-sortable {
+	cursor:pointer;
+	background-image:url("images/sortable.gif");
+	background-position:center left;
+	background-repeat:no-repeat;
+	padding-left:12px;
+}
+th.table-sorted-asc {
+	background-image:url("images/sorted_up.gif");
+	background-position:center left;
+	background-repeat:no-repeat;
+}
+th.table-sorted-desc {
+	background-image:url("images/sorted_down.gif");
+	background-position:center left;
+	background-repeat:no-repeat;
+}
+th.table-filtered {
+	background-image:url("images/filter.gif");
+	background-position:center left;
+	background-repeat:no-repeat;
+}
+select.table-autofilter {
+	font-size:smaller;
+}
+
+
+/* Loading icon */
+span.idle {	
+	padding-right:25px;
+	padding-top:25px;
+        background-position:right center;
+        background-repeat:no-repeat;
+}
+span.idle:after {
+	content:"";
+}
+span.busy {
+	padding-right:25px;
+	padding-top:25px;
+        background-position:right center;
+        background-repeat:no-repeat;
+}
+span.busy:after {
+	content:"";
+}
