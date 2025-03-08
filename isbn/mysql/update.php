@@ -39,6 +39,7 @@
 	catch (Exception $e)
 	{
 		# Store the error message
+		$_SESSION['mysql_result'] = False;
 		$_SESSION['mysql_error'] = mysqli_error($db);
 	}	
 
