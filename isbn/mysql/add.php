@@ -34,10 +34,16 @@
 	}
 	
 	$sql = $sql_start . $sql_values . ")";
-	// print sql;
-
-	$_SESSION['mysql_result'] = mysqli_query($db, $sql);
-	$_SESSION['mysql_error'] = mysqli_error($db);
+	
+	try
+	{
+	   $_SESSION['mysql_result'] = mysqli_query($db, $sql);
+	}
+	catch (Exception $e)
+	{
+		# Store the error message
+		$_SESSION['mysql_error'] = mysqli_error($db);
+	}
 
 	mysqli_close($db);
 
