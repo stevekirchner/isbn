@@ -13,9 +13,11 @@ switch ($action)
 	case "add":
 	case "update":
 	case "delete":
+	case "search":
 		// ***** ADD *****
 		// ***** UPDATE *****
-		// ***** DELETE *****/
+		// ***** DELETE *****
+		// ***** SEARCH *****/
 		if ("update" == $action)
 		{
 			$id = $_GET['id'];
@@ -42,16 +44,16 @@ switch ($action)
 			echo '</form>';
 			echo '<form id="newpart" action="add.php?redirect=index.php" method="POST" onsubmit="return validateForm()">';
 		}
-        elseif ( "search" == $action)
-        {
-            echo '<form onsubmit="return false;">';
-            echo '<label for="author_fn">Enter author first and last names:<br/></label>';
-            echo '<input id="author_fn" type="text" />';
-            echo '<input id="author_ln" type="text" /><br />';
-            echo '<input type="submit" value="Get Info" onclick="fillPage(\'getInfo\',0);" />';
-            echo '</form>';
-            echo '<form id="newpart" action="search_author.php?redirect=index.php" method="POST" onsubmit="return validateForm()">';
-        }
+	        elseif ( "search" == $action)
+	        {
+	            echo '<form onsubmit="return false;">';
+	            echo '<label for="author_fn">Enter author first and last names:<br/></label>';
+	            echo '<input id="author_fn" type="text" />';
+	            echo '<input id="author_ln" type="text" /><br />';
+	            echo '<input type="submit" value="Get Info" onclick="fillPage(\'getInfo\',0);" />';
+	            echo '</form>';
+	            echo '<form id="newpart" action="search_author.php?redirect=index.php" method="POST" onsubmit="return validateForm()">';
+	        }
 		
 		if ( "add" == $action || "update" == $action )
 		{
@@ -62,73 +64,73 @@ switch ($action)
 			{
 			    if ( $row[0] != "ID" )
 			    {
-               echo "<tr>";
-               echo "<td>".$row[0]."</td>";
-               echo '<td>';
-               // Print either an empty input field or a pre-filled one
-               if ("update" == $action)
-               {
-                  if ( $row[0] == "Description" )
-                  {
-                     echo '<textarea name="' . htmlspecialchars($row[0]) . '" rows="5" cols="80" wrap="physical">' . $oldRow[$columnNumber] . '</textarea>';
-                  }
-                  else
-                  {
-                    echo '<input name="' . htmlspecialchars($row[0]) . '" type="text" value="' . htmlentities($oldRow[$columnNumber]) . '" size="75"/>';
-                  }
-               }
-               else // Add - Get ISBN info if set
-               {				         
-                  if ( $row[0] == "Description" )
-                  {
-                     echo '<textarea name="' . htmlentities($row[0]) . '" rows="5" cols="80" wrap="physical"></textarea>';
-                   }
-                   else
-                   {
-                      echo '<input name="' . htmlentities($row[0]) . '" type="text" size="75"/>';
-                   }
-               }
-               echo "</td>";
-				   echo "</tr>";
-			   }
-			   $columnNumber += 1;
-			}
+               			echo "<tr>";
+               			echo "<td>".$row[0]."</td>";
+               			echo '<td>';
+               			// Print either an empty input field or a pre-filled one
+               			if ("update" == $action)
+               			{
+                  			if ( $row[0] == "Description" )
+			                {
+			                    echo '<textarea name="' . htmlspecialchars($row[0]) . '" rows="5" cols="80" wrap="physical">' . $oldRow[$columnNumber] . '</textarea>';
+			                }
+			                else
+			                {
+			                    echo '<input name="' . htmlspecialchars($row[0]) . '" type="text" value="' . htmlentities($oldRow[$columnNumber]) . '" size="75"/>';
+			                }
+			        }
+			        else // Add - Get ISBN info if set
+			        {				         
+				    if ( $row[0] == "Description" )
+				    {
+				       echo '<textarea name="' . htmlentities($row[0]) . '" rows="5" cols="80" wrap="physical"></textarea>';
+				    }
+				    else
+				    {
+				       echo '<input name="' . htmlentities($row[0]) . '" type="text" size="75"/>';
+				    }
+			        }
+				echo "</td>";
+				echo "</tr>";
+			     }
+			     $columnNumber += 1;
+			 }
 
-			echo "</tbody>";
-			echo "</table>";
-			echo '<input type="submit" />';
-			echo '<input type="button" value="Cancel" OnClick="parent.location=\'./index.php\';" />';
-			echo "</form>";
-			// Client will execute JavaScript that follows a '-----' marker
-			echo '-----
-			';
-			  break;
-	    }
-       elseif ( "search" == $action )
-		 {
+			 echo "</tbody>";
+			 echo "</table>";
+			 echo '<input type="submit" />';
+			 echo '<input type="button" value="Cancel" OnClick="parent.location=\'./index.php\';" />';
+			 echo "</form>";
+			 // Client will execute JavaScript that follows a '-----' marker
+			 echo '-----
+			 ';
+			 break;
+	     	}
+	        elseif ( "search" == $action )
+	        {
 			echo "<table>";
 			echo "<tbody>";
-         while ($row = mysqli_fetch_row($result))
-         {
-            if ( $row[0] != "ID" )
-            {
-               echo "<tr>";
-               echo "<td>".$row[0]."</td>";
-               echo '<td>';
-               // Print either an empty input field or a pre-filled one
-               if ( $row[0] == "Description" )
-               {
-                  echo '<textarea name="' . htmlentities($row[0]) . '" rows="5" cols="80" wrap="physical"></textarea>';
-               }
-               else
-               {
-                  echo '<input name="' . htmlentities($row[0]) . '" type="text" size="75"/>';
-               }
-            }
-            echo "</td>";
-            echo "</tr>";
-         }
-          
+		        while ($row = mysqli_fetch_row($result))
+		        {
+		            if ( $row[0] != "ID" )
+		            {
+		               echo "<tr>";
+		               echo "<td>".$row[0]."</td>";
+		               echo '<td>';
+		               // Print either an empty input field or a pre-filled one
+		               if ( $row[0] == "Description" )
+		               {
+		                  echo '<textarea name="' . htmlentities($row[0]) . '" rows="5" cols="80" wrap="physical"></textarea>';
+		               }
+		               else
+		               {
+		                  echo '<input name="' . htmlentities($row[0]) . '" type="text" size="75"/>';
+		               }
+		            }
+		            echo "</td>";
+		            echo "</tr>";
+		        }
+		          
 			echo "</tbody>";
 			echo "</table>";
 			echo '<input type="submit" />';
@@ -137,10 +139,10 @@ switch ($action)
 			// Client will execute JavaScript that follows a '-----' marker
 			echo '-----
 			';
-         break;
-      }
+		        break;
+		      }
 
-	case "browse":
+      case "browse":
 		// ***** BROWSE *****
 		$nextQuery = "SELECT ID";
 		echo '<table class="example table-autosort:0 table-stripeclass:alternate table-autofilter table-autopage:20 table-page-number:t1page table-page-count:t1pages table-filtered-rowcount:t1filtercount table-rowcount:t1allcount">';
@@ -185,7 +187,7 @@ switch ($action)
 		echo '<td colspan=1 class="table-page:previous" style="cursor:pointer;"><img src="images/previous.png" title="Previous"/> Previous</td>';
 		echo '<td style="text-align:center;">Page <span id="t1page"></span>&nbsp;of <span id="t1pages"></span></td>';
 		echo '<td class="table-page:next" style="cursor:pointer;">Next <img src="images/next.png" title="Next"/></td>';
-        echo '<td colspan=6></td>';
+        	echo '<td colspan=6></td>';
 		echo "</tr>";
 		echo '<td colspan=9><span id="t1filtercount"></span> of <span id="t1allcount"></span>&nbsp;rows match filter(s)</td>';
 		echo "<tr>";
