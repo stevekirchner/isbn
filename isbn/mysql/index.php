@@ -50,6 +50,8 @@
 <label for="browse">Browse/Update</label>
 <input type="radio" name="action" id="add" value="add" onclick="fillPage('',0);" />
 <label for="add">Add New Book</label>
+<input type="radio" name="search" id="add" value="search" onclick="fillPage('',0);" />
+<label for="search">Add New Book</label>
 <span id="waitbox" class="idle"></span>
 <script>
 var opts = {
